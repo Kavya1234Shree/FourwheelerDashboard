@@ -1,0 +1,48 @@
+<h1 style="text-align: center;font-family: Georgia, serif;"> Four Wheeler Online Registered Drivers (DriverOnly)</h1>
+<button mat-raised-button color="primary" style="margin-top:20px; margin-left: 1100px;margin-bottom: 10px;width:120px;" [routerLink]="['/fourwheelerdrivers']" (click)="refresh()">Refresh</button><br>
+<input  type="text" id="myInput" placeholder="Search here.. " [(ngModel)]="term" title="Type in a name">
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0" style="background-color: white;">
+     <div class="container">
+            
+      <table id="customers">
+        <col width="130">
+  <thead>
+  <tr style="column-width: auto;">
+    <th >SL.no</th>
+  <th>phone</th>
+  <th>vehicle number</th>
+  <th>work preference</th>
+  <th>Action</th>
+  <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let driverfour of driverfours|paginate: { id: 'listing_pagination',itemsPerPage: 10,currentPage: page,totalItems: totalRec }|filter:term;let i = index;">
+  <td >{{(page-1)*10+i+1}}</td>
+  <td>{{driverfour.phone}}</td>
+  <td>{{driverfour.vehicle_number}}</td>
+  <td>{{driverfour.work_preference}}</td>
+  <td><button mat-raised-button style="background-color:darkcyan;color:white;" (click)="openModal(driverfour.phone,driverfour.vehicle_number,driverfour.work_preference)">EDIT</button></td>
+
+  <td>
+    <button mat-raised-button id="remove" mwlConfirmationPopover
+    [popoverTitle]="popoverTitle"
+    [popoverMessage]="popoverMessage"
+    placement="left"
+    (confirm)="deleteRow(driverfour.phone)"
+    (cancel)="cancelClicked = true" style="background-color:darkcyan; color:white;" >DELETE</button>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <div>
+    <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+    </div>
+  </div>
+  </div>
+  

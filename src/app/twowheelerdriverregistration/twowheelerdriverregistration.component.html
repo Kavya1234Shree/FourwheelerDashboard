@@ -1,0 +1,171 @@
+
+<div class="main-content">
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-md-8">
+  <div class="card">
+  <div class="card-header card-header-info">
+  <h4 class="card-title">Two  Wheeler Driver Registration</h4>
+  <p class="card-category">Complete your profile</p>
+  </div>
+  <div class="card-body">
+                                                     
+  <div class="form-group">      
+  <div class="row">
+   <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput name="driver_uuid" [(ngModel)]="driver_uuid" placeholder="driver_uuid" required> 
+  </mat-form-field>
+    </div>
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput name="vendor_uuid" [(ngModel)]="vendor_uuid" placeholder="vendor_uuid"required> 
+  </mat-form-field>
+  </div>
+  </div>
+  </div>
+  
+  
+  <div class="row">
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="driver_name"  [(ngModel)]="driver_name" placeholder="driver name" required> 
+  
+  </mat-form-field>
+  </div>
+   <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="email" [(ngModel)]="email"  placeholder="email" required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="phone" [(ngModel)]="phone" placeholder="phone" maxlength="10" required> 
+  </mat-form-field>
+  </div>
+  </div>
+  
+  
+  <div class="form-group">      
+  <div class="row">
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput name="alternate_contact_num" [(ngModel)]="alternate_contact_num"  maxlength="10" placeholder="Alternate Contact Number" required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput name="emergency_contact_num" [(ngModel)]="emergency_contact_num"  maxlength="10" placeholder="Emergency Contact Number"required> 
+  </mat-form-field>
+  </div>
+  </div>
+  </div>
+  
+  
+   <label>Driver Address :</label><br>
+  <div class="row">
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="driver_address" [(ngModel)]="driver_address" placeholder="Address"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="driver_city" [(ngModel)]="driver_city" placeholder="City"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="driver_state" [(ngModel)]="driver_state" placeholder="State"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="driver_state"[(ngModel)]="driver_zip" placeholder="Zip"required> 
+  </mat-form-field>
+  </div>
+  </div> 
+  
+  
+  <div class="row">
+  <div class="col-md-6">
+  <label>profilepic:
+  <input type="file"(change)="onFileChanged($event)"></label>
+  </div>
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput name="vehicle_number" [(ngModel)]="vehicle_number" placeholder="Vehicle Number"required> 
+  </mat-form-field>
+  </div>
+  </div>
+  
+ 
+  <div class="row">
+  
+    <div class="col-md-4">
+      <label>DL Scan Copy:
+      <input type="file" (change)="onDlscancopyFileChanged($event)"/></label>
+      </div>
+      <div class="col-md-4">
+        <label>Insurance image:
+        <input type="file" (change)="onInsuranceimageFileChanged($event)"/></label><br>
+        </div>
+    <div class="col-md-4">
+    <label>Driver Aadhar Card:
+    <input type="file" (change)="onDriveraadharcardFileChanged($event)"></label><br>
+    </div>
+    
+    
+    </div>
+  
+
+  
+  
+  <div class="row">
+    <div class="col-md-4">
+      <label>Image of RC Card:
+      <input type="file" (change)="onRccardimageFileChanged($event)"></label>
+      </div> 
+  
+  </div>
+  
+
+  
+  
+  
+  
+  
+  <div class="row">
+  <div class="col-md-4">
+  <label>rc_expiry_date:
+  <input type="date" name="rc_expiry_date" [(ngModel)]="rc_expiry_date" useValueAsDate></label>
+  </div>
+  <div class="col-md-4">
+  <label>DL Expiry Date:
+  <input type="date" name="dl_expiry_date" [(ngModel)]="dl_expiry_date" useValueAsDate></label>
+  </div>
+  <div class="col-md-4">
+  <label>insurence_expiry_date:
+  <input type="date" name="insurence_expiry_date" [(ngModel)]="insurence_expiry_date" useValueAsDate></label>
+  </div>
+  </div>  
+  
+
+ 
+  
+  
+  <div class="btn btn-info pull-left">
+  <input  color="primary" type="checkbox" [checked]="active" (change)="active= !active">active
+  </div>        
+  <!-- owner_cum_driver, will_accept_to_work_for_below_categor,body_type-->
+  <div class="col-md-12">
+  <button mat-raised-button type="submit"(click)="onDriver(driver_name,email,phone,driver_address,driver_city,driver_state,driver_zip,alternate_contact_num,
+  emergency_contact_num,vehicle_number,dl_expiry_date,rc_expiry_date,insurence_expiry_date,active)"class="btn btn-info pull-right">Update Profile</button>
+  </div>
+  </div>
+  </div>
+  </div> 
+  </div>
+  </div>
+  </div>
+  

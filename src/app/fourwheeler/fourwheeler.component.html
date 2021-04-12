@@ -1,0 +1,104 @@
+<div class="row" >
+    <div class="column" style="background-color:rgb(233, 240, 241);" >
+
+<div class="left">
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col-sm-10">
+    <mat-form-field class="example-full-width">
+
+    <input matInput name="pick_address" placeholder="PickUp Address" autocorrect="off" autocapitalize="off" spellcheck="off"  class="form-control" #search formControlName ="pick_address">
+  </mat-form-field>
+</div>
+</div>
+
+  <div class="row">
+      <div class="col-sm-10">
+ <mat-form-field class="example-full-width">
+    <input matInput name="drop_address" placeholder="Drop Address" autocorrect="off" autocapitalize="off" spellcheck="off"  class="form-control" #destination formControlName ="drop_address">
+  </mat-form-field>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-10">
+    <div class="form-group">
+        <mat-form-field>
+        <mat-label>Select Type of GOODS</mat-label>
+        <mat-select formControlName ="selectings" multiple>
+        <mat-option *ngFor="let selecting of selectingList" [value]="selecting">{{selecting}}</mat-option>
+        </mat-select>
+        </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="form-group">
+                <mat-form-field>
+                <mat-label>Where You Want To Go</mat-label>
+                <mat-select formControlName ="goings" multiple>
+                <mat-option *ngFor="let going of goingList" [value]="going">{{going}}</mat-option>
+                </mat-select>
+                </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+
+  <div class="row">
+      <div class="col-sm-6">
+  <mat-form-field class="example-full-width">
+    <input matInput name="customer_name" placeholder="customer_name" class="form-control" formControlName="customer_name"> 
+  </mat-form-field>
+</div>
+<div class="col-sm-6">
+  <mat-form-field class="example-full-width">
+    <input matInput name="customer_number" placeholder="customer_number" class="form-control" formControlName="customer_number"> 
+  </mat-form-field>
+  
+</div>
+</div>
+<div class="row">
+ 
+    <div class="col-sm-6">
+    <mat-form-field class="example-full-width">
+    <input matInput name="landmark_for_delievery" placeholder="landmark_for_delievery" class="form-control" formControlName="landmark_for_delievery"> 
+    </mat-form-field>
+   </div>
+ </div>
+
+  <mat-form-field class="example-full-width">
+    <input  matInput name="amount" placeholder="amount" class="form-control" formControlName="amount"> 
+  </mat-form-field>
+
+    <button type="submit" (click)="getDirection()" class="btn btn-info pull-center">Book Here</button>
+
+</form>
+
+</div>
+</div> 
+   
+   
+   
+<div class="column" style="background-color:rgb(122, 182, 218);">
+
+  <div class="right">
+   
+    <agm-map [latitude]='12.9716'
+    [longitude]='77.5946'
+    [zoom]='12'>
+      <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+      <agm-marker [latitude]="latitude1" [longitude]="longitude1"></agm-marker>
+      <agm-direction *ngIf="dir" [origin]="dir.origin" [destination]="dir.destination"></agm-direction>
+      
+    </agm-map>
+  
+  
+  </div>
+  
+ 
+
+</div>
+</div> 

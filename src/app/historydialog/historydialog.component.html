@@ -1,0 +1,172 @@
+<div class="main-content" style="width: 1000px;">
+  <div class="container-fluid"> 
+    <div class="row">
+  <div class="col-md-8">
+  <div class="card">
+  <div class="card-header card-header-success">
+  <button mat-raised-button class="btn trade-back" style="margin-left:600px;" (click)="closeModal()">Back</button>
+  <h4 class="card-title">History</h4>
+  </div>  
+  <div class="card-body">
+  <div class="row">
+          <div class="col-md-4">
+          <mat-form-field class="example-full-width">
+            <input  matInput  name="status" [(ngModel)]="status" placeholder="Status"> 
+          </mat-form-field>
+       </div>
+          <div class="col-md-4">
+        <mat-form-field class="example-full-width" >
+          <input  matInput  name=" old_trans_uuid" [(ngModel)]=" old_trans_uuid" placeholder="Transaction id" > 
+        </mat-form-field>  
+        </div>
+        <div class="col-md-4">
+            <mat-form-field class="example-full-width">
+              <input  matInput  name="type_of_vehicle" [(ngModel)]="type_of_vehicle" placeholder="Type of vehicle" > 
+            </mat-form-field>
+            </div> 
+         
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                  <input  matInput  name="order_time1" [(ngModel)]="order_time1" placeholder="Time of Order" > 
+                </mat-form-field>
+                </div> 
+                
+                <div class="col-md-4">
+                    <mat-form-field class="example-full-width">
+                      <input  matInput  name="customer_uuid" [(ngModel)]="customer_uuid" placeholder="Customer id" > 
+                    </mat-form-field>
+                    </div> 
+                    <div class="col-md-4">
+                        <mat-form-field class="example-full-width">
+                          <input  matInput  name="amount" [(ngModel)]="amount" placeholder="Amount" > 
+                        </mat-form-field>
+                        </div> 
+                        <div class="col-md-4">
+                            <mat-form-field class="example-full-width">
+                              <input  matInput  name="type_of_packages" [(ngModel)]="type_of_packages" placeholder="Type of package" > 
+                            </mat-form-field>
+                            </div> 
+                            <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input  matInput  name=" accepted_time1" [(ngModel)]="accepted_time1" placeholder="Accepted time" > 
+                                </mat-form-field>
+                                </div> 
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                      <input readonly matInput  name=" driver_uuid" [(ngModel)]="driver_uuid" placeholder="Driver id" > 
+                                    </mat-form-field>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <mat-form-field class="example-full-width">
+                                          <input  matInput  name="delivered_time1" [(ngModel)]="delivered_time1" placeholder="Delivered time" > 
+                                        </mat-form-field>
+                                        </div>
+                                       
+                                        <div class="col-md-4">
+                                            <mat-form-field class="example-full-width">
+                                              <input  matInput  name="pick_up_time1" [(ngModel)]="pick_up_time1" placeholder="Pickup time" > 
+                                            </mat-form-field>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <mat-form-field class="example-full-width">
+                                                  <input  matInput  name="selectchildvehical" [(ngModel)]="selectchildvehical" placeholder="Vehicle name" > 
+                                                </mat-form-field>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <mat-form-field class="example-full-width">
+                                                      <input  matInput  name="payment_method" [(ngModel)]="payment_method" placeholder="Payment method" > 
+                                                    </mat-form-field>
+                                                    </div>
+                <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+              <input  matInput  name="vehicle_amount" [(ngModel)]="vehicle_amount" placeholder="vehicle_amount" > 
+             </mat-form-field>
+             </div>
+             <div class="col-md-4">
+             <mat-form-field class="example-full-width">
+             <input  matInput  name="name" [(ngModel)]="name" placeholder="name" > 
+            </mat-form-field>
+             </div>
+            <div class="col-md-4">
+           <mat-form-field class="example-full-width">
+           <input  matInput  name="phone" [(ngModel)]="phone" placeholder="phone" > 
+           </mat-form-field>
+            </div>
+           <div class="col-md-4">
+          <mat-form-field class="example-full-width">
+        <input  matInput  name="address" [(ngModel)]="address" placeholder="address" > 
+        </mat-form-field>
+       </div>
+     <div class="col-md-4">
+      <mat-form-field class="example-full-width">
+      <input  matInput  name="landmark" [(ngModel)]="landmark" placeholder="landmark" > 
+      </mat-form-field>
+      </div>
+      
+      <div class="col-md-4">
+        <mat-form-field class="example-full-width">
+        <input matInput readonly name="delivered1_time1" [(ngModel)]="delivered1_time1" placeholder="1st Delivered Time"required> 
+        </mat-form-field>
+        </div>
+
+        <div class="col-md-4">
+          <mat-form-field class="example-full-width">
+          <input matInput readonly name="delivered2_time1" [(ngModel)]="delivered2_time1" placeholder="2nd Delivered Time"required> 
+          </mat-form-field>
+          </div>
+
+          <div class="col-md-4">
+            <mat-form-field class="example-full-width">
+            <input matInput readonly name="delivered3_time1" [(ngModel)]="delivered3_time1" placeholder="3rd Delivered Time"required> 
+            </mat-form-field>
+            </div>
+
+            <div class="col-md-4">
+              <mat-form-field class="example-full-width">
+              <input matInput readonly name="delivered4_time1" [(ngModel)]="delivered4_time1" placeholder="4th Delivered Time"required> 
+              </mat-form-field>
+              </div>
+
+              <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                <input matInput readonly name="delivered5_time1" [(ngModel)]="delivered5_time1" placeholder="5th Delivered Time"required> 
+                </mat-form-field>
+                </div>
+
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                  <input matInput readonly name="mulpoint1" [(ngModel)]="mulpoint1" placeholder="1st delivered address"required> 
+                  </mat-form-field>
+                  </div>
+
+                  <div class="col-md-3">
+                    <mat-form-field class="example-full-width">
+                    <input matInput readonly name="mulpoint2" [(ngModel)]="mulpoint2" placeholder="2nd delivered address"required> 
+                    </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                      <mat-form-field class="example-full-width">
+                      <input matInput readonly name="mulpoint3" [(ngModel)]="mulpoint3" placeholder="3rd delivered address"required> 
+                      </mat-form-field>
+                      </div>
+
+                      <div class="col-md-3">
+                        <mat-form-field class="example-full-width">
+                        <input matInput readonly name="mulpoint4" [(ngModel)]="mulpoint4" placeholder="4th delivered address"required> 
+                        </mat-form-field>
+                        </div>
+
+                        <div class="col-md-3">
+                          <mat-form-field class="example-full-width">
+                          <input matInput readonly name="mulpoint5" [(ngModel)]="mulpoint5" placeholder="5th delivered address"required> 
+                          </mat-form-field>
+                          </div>
+
+
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>

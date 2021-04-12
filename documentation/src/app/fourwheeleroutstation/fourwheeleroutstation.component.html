@@ -1,0 +1,85 @@
+
+<h1 style="text-align: center;font-family: Georgia, serif;">Reference Registartion</h1>
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="100px"
+     fxLayoutGap.xs="0" style="background-color: rgb(223, 235, 240);">
+
+<div class="main-content">
+  <div class="container-fluid">
+  <div class="container">
+  <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <div class="col-md-8">
+          <label style="color: black;">Name</label>
+          <input type="text" class="form-control" formControlName="name">
+        </div></div>
+        <div class="form-group">
+          <div class="col-md-8">
+          <label style="color: black;">Phone</label>
+          <input type="text" class="form-control" formControlName="phone" maxlength="10">
+        </div></div>
+      <div formGroupName="address">
+  <div class="form-group">
+      <div class="col-md-8">
+      <label style="color: black;">Address1</label>
+      <input type="text" class="form-control" formControlName="address1">
+    </div></div>
+    <div class="form-group">
+      <div class="col-md-8">
+      <label style="color: black;">City</label>
+      <input type="text" class="form-control" formControlName="city">
+    </div></div>
+</div>
+<div class="form-group">
+  <div class="col-md-8">
+  <label style="color: black;">Company_Name</label>
+  <input type="text" class="form-control" formControlName="company_name">
+</div></div>
+<div class="form-group">
+  <div class="col-md-8">
+  <label style="color: black;">Pan_Number</label>
+  <input type="text" class="form-control" formControlName="pan_number">
+</div></div>
+<div class="form-group">
+  <div class="col-md-8">
+  <label style="color: black;">Aadhar_Number</label>
+  <input type="text" class="form-control" formControlName="aadhar_number">
+</div></div>
+<div formGroupName="bank_details">
+  <div class="form-group">
+      <div class="col-md-8">
+      <label style="color: black;">Bank_Name</label>
+      <input type="text" class="form-control" formControlName="bank_name">
+    </div></div>
+    <div class="form-group">
+      <div class="col-md-8">
+      <label style="color: black;">Account_Number</label>
+      <input type="text" class="form-control" formControlName="account_number">
+    </div></div>
+    <div class="form-group">
+      <div class="col-md-8">
+      <label style="color: black;">IFSC_Code</label>
+      <input type="text" class="form-control" formControlName="ifsc_code">
+    </div></div>
+  </div>
+  <div class="form-group">
+  <label style="color: black;">GST:</label><input #small type="checkbox" (change)="0">
+  <div class="form-group">
+      <div class="col-md-8">
+        <p *ngIf="small.checked">GST_Number:<input type="text" formControlName="gstn"  class="form-control">
+         
+        </p>
+      </div>
+  </div>
+ </div>
+<button type="submit" class="btn btn-success">Submit</button><br>
+</form>
+</div>
+
+
+ </div>
+ </div>
+ </div>

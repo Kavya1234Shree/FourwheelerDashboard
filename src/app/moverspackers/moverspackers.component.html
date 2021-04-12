@@ -1,0 +1,28 @@
+<form #twowheelerForm="ngForm" (ngSubmit)="onSubmit(twowheelerForm)">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Create Employee</h3>
+  </div>
+
+
+<div class="panel-body">
+  <div class="form-group" [class.has-error]="DiverName.invalid && DiverName.touched"
+  [class.has-success]="DiverName.valid">
+<label for="driver_name" class="control-label">Driver Name</label>
+<input required="driver_name" name="driver_name" [(ngModel)]=driver_name type="text" class="form-control" #DiverName='ngModel'>
+    <span class="help-block" *ngIf="DiverName.invalid && DiverName.touched">driver name is required</span>
+    
+  </div> 
+
+
+<div class="panel-footer">
+  <Button type="submit" class="btn btn-primary" [disabled]="twowheelerForm.invalid">Save</Button>
+</div>
+</div>
+
+
+</div>
+</form>
+
+
+

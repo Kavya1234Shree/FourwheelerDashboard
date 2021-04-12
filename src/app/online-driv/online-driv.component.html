@@ -1,0 +1,46 @@
+<h2 style="text-align: center;font-family: Georgia, serif;">Online Drivers List</h2>
+<div class="container"
+fxLayout
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="10px"
+fxLayoutGap.xs="0" style="background-color: white;">
+<div class="trade-75">
+  <button type="button" class="btn trade-back"  [routerLink]="['/dashboard']">Back</button> 
+</div>
+<div class="container">
+         <table id="customers">
+    <col width="130">
+  <thead>
+   <tr>
+     <th>SL.NO</th>
+     <th>Id</th>
+     <th>Driver Name</th>
+     <th>Phone</th>
+     <th>Last Online Status</th>
+     <th>Action</th>
+  </thead>
+      <tr *ngFor="let driver of online_info|paginate: {id:'listing_pagination',itemsPerPage: 15,currentPage: page,totalItems: totalRec }|filter:term;let i = index;">
+        <td >{{(page-1)*15+i+1}}</td>
+        <td *ngFor="let diver of driver.driver_info">{{diver.driver_uuid}}</td>
+        <td *ngFor="let diver of driver.driver_info">{{diver.driver_name}}</td>
+        <td *ngFor="let diver of driver.driver_info">{{diver.phone}}</td> 
+        <td>{{driver.updated_time | date}}</td>
+        <td>
+          <button mat-raised-button id="remove" mwlConfirmationPopover
+          [popoverTitle]="popoverTitle"
+          [popoverMessage]="popoverMessage"
+          placement="left"
+          (confirm)="sendMes(diver.driver_uuid)"
+          (cancel)="cancelClicked = true"   style="background-color:darkcyan; color:white;" >Send Message</button>
+        </td>
+       <!-- <td>{{driver.driver_uuid}}</td> 
+       <td>{{driver.driver_name }}</td>
+       <td>{{driver.phone}}</td> -->
+       </tr>
+    </table>
+    <div>
+      <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+    </div>
+    </div>
+    </div>

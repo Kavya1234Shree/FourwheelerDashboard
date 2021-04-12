@@ -1,0 +1,523 @@
+
+<div class="main-content">
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-md-10">
+  <div class="card">
+  <div class="card-header card-header-info">
+  <h4 class="card-title">Four Wheeler Driver Only registration</h4>
+  <p class="card-category">Complete your profile</p>
+  </div>
+
+<div class="card-body">
+<button type="button" class="btn btn-success" id="modal-cancel-button" (click)="closeModal()">GO BACK</button>
+         
+  <div class="form-group">      
+  <div class="row">
+   <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="driver_uuid" [(ngModel)]="_id" placeholder="driver_uuid" required> 
+  </mat-form-field>
+    </div>
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="vendor_uuid" [(ngModel)]="vendor_uuid" placeholder="vendor_uuid"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+    <mat-form-field class="example-full-width">
+    <input matInput name="vehicle_number" [(ngModel)]="vehicle_number" placeholder="Vehicle Number"required> 
+    </mat-form-field>
+  </div>
+  </div>
+  </div>
+
+
+  
+<div class="row">
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="driver_name"  [(ngModel)]="driver_name" placeholder="driver name" required> 
+  </mat-form-field>
+  </div>
+   <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="email" [(ngModel)]="email"  pattern="[^ @]*@[^ @]*" placeholder="email" required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="phone" [(ngModel)]="phone" placeholder="phone" maxlength="10" required> 
+  </mat-form-field>
+  </div>
+  </div>
+  
+  
+  <div class="form-group">      
+  <div class="row">
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="alternate_contact_num" [(ngModel)]="alternate_contact_num"  maxlength="10" placeholder="Alternate Contact Number" required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="emergency_contact_num" [(ngModel)]="emergency_contact_num"  maxlength="10" placeholder="Emergency Contact Number"required> 
+  </mat-form-field>
+  </div>
+  </div>
+  </div>
+  
+  
+   <label>Driver Address :</label><br>
+  <div class="row">
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="driver_address1" [(ngModel)]="driver_address1" placeholder="Address"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="driver_city" [(ngModel)]="driver_city" placeholder="City"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="driver_state" [(ngModel)]="driver_state" placeholder="State"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="driver_zip"[(ngModel)]="driver_zip" placeholder="Zip"required> 
+  </mat-form-field>
+  </div>
+  </div> 
+ 
+  <label>Owner Address :</label><br>
+  <div class="row">
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="address1" [(ngModel)]="address1" placeholder="Address1"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="city" [(ngModel)]="city" placeholder="City"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="state" [(ngModel)]="state" placeholder="State"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="zip"[(ngModel)]="zip" placeholder="Zip"required> 
+  </mat-form-field>
+  </div>
+  </div> 
+
+
+  <div class="row">
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="badge" [(ngModel)]="badge" placeholder="Badge"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="body_asper_RC" [(ngModel)]="body_asper_RC" placeholder="Body as per RC"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="vehicle_registered_owner" [(ngModel)]="vehicle_registered_owner" placeholder="Vehicle Registered Owner"required> 
+  </mat-form-field>
+  </div>
+  
+  </div>
+  
+  
+   <div class="row">
+  <div class="col-md-6">
+  <label>PERMIT VALIDITY:
+  <input  name="permit_val1" [(ngModel)]="permit_val1" placeholder="Date"></label>
+  </div>
+  <div class="col-md-6">
+  <label>BADGE VALIDITY:
+  <input  name="badge_val1" [(ngModel)]="badge_val1" placeholder="Date"></label>
+  </div>
+  </div>
+  
+  <label>driver_reference_one :</label><br>
+  <div class="row">
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="namea" [(ngModel)]="namea" placeholder="Name"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="contact_numbera" [(ngModel)]="contact_numbera" maxlength="10" placeholder="Contact Number"required> 
+  </mat-form-field>
+  </div>
+  </div>
+  <label>driver_reference_two:</label><br>
+  <div class="row">
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="nameb" [(ngModel)]="nameb" placeholder="Name"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="contact_numberb" [(ngModel)]="contact_numberb" maxlength="10" placeholder="Contact Number"required> 
+  </mat-form-field>
+  </div>
+  </div>
+  
+
+  <label>Reference_one :</label><br>
+  <div class="row">
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="namec" [(ngModel)]="namec" placeholder="Name"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="contact_numberc" [(ngModel)]="contact_numberc" maxlength="10" placeholder="Contact Number"required> 
+  </mat-form-field>
+  </div>
+  </div>
+  <label>Rreference_two:</label><br>
+  <div class="row">
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="named" [(ngModel)]="named" placeholder="Name"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="contact_numberd" [(ngModel)]="contact_numberd" maxlength="10" placeholder="Contact Number"required> 
+  </mat-form-field>
+  </div>
+  </div>
+  
+<div class="row">
+<div class="col-md-4">
+<label>Image of RC Card:
+<input type="file" (change)="onRccardimageFileChanged($event)"></label>
+<button (click)="rccardimage('left')">rotate left</button>
+<button (click)="rccard('right')">rotate right</button>
+<div class="row">
+  <a href="{{rc_card_image}}" target="rc_card_image">
+    <br>
+  <img  id="rccard" src="{{rc_card_image}}" style="width: 250px;height:250px;"></a>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<label>Permit Image:
+<input type="file" (change)="onPermitimageFileChanged($event)"></label><br>
+<button (click)="permitimage('left')">rotate left</button>
+<button (click)="permit('right')">rotate right</button>
+<div class="row">
+  <a href="{{permit_image}}" target="permit_image"><br>
+  <img id="permit" src="{{permit_image}}" style="width: 250px;height:250px;">
+  </a>
+</div>
+</div>
+
+<div class="col-md-4">
+<label>Insurance image:
+<input type="file"  (change)="onInsuranceimageFileChanged($event)"/></label><br>
+<button (click)="insuranceimage('left')">rotate left</button>
+<button (click)="insurance('right')">rotate right</button>
+<div class="row">
+  <a href="{{insurance_image}}" target="insurance_image"><br>
+  <img id="insurance" src="{{insurance_image}}" style="width: 250px;height:250px;">
+  </a>
+</div>
+</div>
+<div class="col-md-4">
+  <label>Profile photo:
+  <input type="file" (change)="onProfilephotoimageFileChanged($event)"/></label><br>
+  <button (click)="profileimage('left')">rotate left</button>
+<button (click)="profile('right')">rotate right</button>
+  <div class="row">
+    <a href="{{this.profile_photo}}" target="profile_photo"><br>
+    <img  id="profile" src="{{profile_photo}}" style="width: 250px;height:250px;"></a>
+  </div>
+  </div>
+
+
+<div class="col-md-4">
+<label>vehicle photo back:
+<input type="file" (change)="onvehiclephotobackFileChanged($event)"/></label><br>
+<button (click)="vehiclebackimage('left')">rotate left</button>
+<button (click)="vehicleback('right')">rotate right</button>
+<div class="row">
+  <a href="{{vehicle_photo_back}}" target="vehicle_photo_back"><br>
+  <img id="vehiclephotoback" src="{{vehicle_photo_back}}" style="width: 250px;height:250px;"></a>
+</div>
+</div>
+
+<div class="col-md-4">
+<label>vehicle photo front:
+<input type="file" (change)="onvehiclephotofrontFileChanged($event)"/></label><br>
+<button (click)="vehiclefrontimage('left')">rotate left</button>
+<button (click)="vehiclefront('right')">rotate right</button>
+<div class="row">
+  <a href="{{vehicle_photo_front}}" target="vehicle_photo_front"><br>
+  <img id="vehiclephotofront"  src="{{vehicle_photo_front}}" style="width: 250px;height:250px;"></a>
+</div>
+ </div>
+ 
+<div class="col-md-4">
+<label>vehicle photo right:
+<input type="file" (change)="onvehiclephotorightFileChanged($event)"/></label><br>
+<button (click)="vehiclerightimage('left')">rotate left</button>
+<button (click)="vehicleright('right')">rotate right</button>
+<div class="row">
+  <a href="{{vehicle_photo_right}}" target="vehicle_photo_right"><br>
+  <img id="vehiclephotoright" src="{{vehicle_photo_right}}" style="width: 250px;height:250px;">
+</a>
+</div>
+</div>
+
+<div class="col-md-4">
+ <label>vehicle photo left:
+<input type="file" (change)="onvehiclephotoleftFileChanged($event)"/></label><br>
+<button (click)="vehicleleftimage('left')">rotate left</button>
+<button (click)="vehicleleft('right')">rotate right</button>
+<div class="row">
+  <a href="{{vehicle_photo_left}}" target="vehicle_photo_left"><br>
+  <img id="vehiclephotoleft" src="{{vehicle_photo_left}}" style="width: 250px;height:250px;">
+  </a>
+</div>
+</div>
+  <div class="col-md-4">
+    <label>DL Scan Copy:
+    <input type="file" (change)="onDlscancopyFileChanged($event)"/></label>
+    <button (click)="dlscanimage('left')">rotate left</button>
+<button (click)="dlscan('right')">rotate right</button>
+    <div class="row">
+      <a href="{{dl_scan_copy}}" target="dl_scan_copy"><br>
+  <img id="dlscan" src="{{dl_scan_copy}}" style="width: 250px;height:250px;">
+  </a>
+  </div></div>
+    <br>
+  <div class="col-md-4">
+  <label>Driver Pan Card:
+  <input type="file" (change)="onDriverpancardFileChanged($event)"></label>
+  <button (click)="driverpancardimage('left')">rotate left</button>
+<button (click)="driverpancard('right')">rotate right</button>
+  <div class="row">
+    <a href="{{driver_pan_card}}" target="driver_pan_card"><br>
+    <img id="driverpancard" src="{{driver_pan_card}}" style="width: 250px;height:250px;">
+    </a>
+  </div>
+  </div>
+  <br>
+  <div class="col-md-4">
+  <label>Driver Aadhar Card:
+  <input type="file" (change)="onDriveraadharcardFileChanged($event)"></label><br>
+  <button (click)="driveraadharcardimage('left')">rotate left</button>
+  <button (click)="driveraadharcard('right')">rotate right</button>
+  <div class="row">
+    <a href="{{driver_aadhar_card}}" target="driver_aadhar_card"><br>
+    <img id="driveraadharcard" src="{{driver_aadhar_card}}"  style="width: 250px;height:250px;">
+    </a>
+  </div>
+  </div>
+  <br>
+  <div class="col-md-4">
+    <label>Owner Aadhar Card:
+    <input type="file" (change)="onOwneraadharcardFileChanged($event)"></label><br>
+    <button (click)="owneraadharcardimage('left')">rotate left</button>
+<button (click)="owneraadharcard('right')">rotate right</button>
+    <div class="row">
+      <a href="{{owner_aadhar_card}}" target="owner_aadhar_card"><br>
+      <img  id="owneraadharcard" src="{{owner_aadhar_card}}" style="width: 250px;height:250px;">
+      </a>
+    </div>
+    </div>
+  </div>
+  
+  <div class="row">
+  
+  <div class="col-md-6">
+  <label>Puc Image:
+  <input type="file" (change)="onPucimageFileChanged($event)"></label><br>
+  <button (click)="pucimage('left')">rotate left</button>
+  <button (click)="puc('right')">rotate right</button>
+  <div class="row">
+    <a href="{{puc_image}}" target="puc_image"><br>
+    <img id="puc" src="{{puc_image}}" style="height: 250px; width: 250px;">
+    </a>
+  </div> 
+  </div>
+  
+  <div class="col-md-6">
+    <label>Cancelled Cheque Image:
+    <input type="file" (change)="onCancelledchequeimageFileChanged($event)"></label><br>
+    <button (click)="cancelledimage('left')">rotate left</button>
+<button  (click)="cancelled('right')">rotate right</button>
+    <div class="row">
+      <a href="{{cancelled_cheque_image}}" target="cancelled_cheque_image"><br>
+      <img id="cancelledchequeimage"  src="{{cancelled_cheque_image}}"style="height: 250px; width: 250px;">
+      </a>
+    </div>
+    </div>
+ </div>
+  
+  <div class="row">
+  <div class="col-md-4">
+  <label>REGN Date:
+  <input  name="registered_time1" [(ngModel)]="registered_time1" ></label>
+  </div>
+  <div class="col-md-4">
+  <label>DL Expiry Date:
+  <input  name="dl_expiry_date1" [(ngModel)]="dl_expiry_date1" ></label>
+  </div>
+  <div class="col-md-4">
+  <label>F C VALIDITY Date:
+  <input name="fc_val1" [(ngModel)]="fc_val1" ></label>
+  </div>
+  </div>  
+  
+  <div class="row">
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="manufacturer" [(ngModel)]="manufacturer" placeholder="manufacturer"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="class1" [(ngModel)]="class1" placeholder="class"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+    <mat-form-field class="example-full-width">
+    <input matInput  name="model" [(ngModel)]="model" placeholder="Model"required> 
+    </mat-form-field>
+    </div>
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="color" [(ngModel)]="color" placeholder="Color"required> 
+  </mat-form-field>
+  </div>
+  </div>
+  
+  
+  <div class="row">
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="gvw_in_kg" [(ngModel)]="gvw_in_kg" placeholder="GVW in kg(Gross Vehicle Weight)"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput name="unladen_weight" [(ngModel)]="unladen_weight" placeholder="UNLADEN WEIGHT in kg"required> 
+  </mat-form-field>
+  </div>
+  </div>
+  
+
+  <div class="row">
+  <div class="col-sm-6">
+  <mat-form-field>
+  <mat-label>Work Preference</mat-label>
+  <mat-select [(ngModel)] ="work_preference" name="work_preference">
+  <mat-option *ngFor="let packing of packingList" [value]="packing">{{packing}}</mat-option>
+  </mat-select>
+  </mat-form-field>
+  </div> 
+   <div class="col-sm-6">
+  <mat-form-field>
+  <mat-label>Body Type</mat-label>
+  <mat-select [(ngModel)]="body_type"name="body_type">
+  <mat-option *ngFor="let account of accountsss" [value]="account.id" > {{account.name}}
+  </mat-option>
+  </mat-select> 
+  </mat-form-field>
+  </div>
+  </div> 
+  
+  
+   <div class="row">
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="category" [(ngModel)]="category" placeholder="Category"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="seating_capacity" [(ngModel)]="seating_capacity" placeholder="Seating Capacity"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput  name="road_tax_val" [(ngModel)]="road_tax_val" placeholder="ROAD TAX VALIDITY"required> 
+  </mat-form-field>
+  </div>
+  </div> 
+
+
+  <label> Owner Bank Details:</label><br>                                                      
+  <div class="row">
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="bank_name" [(ngModel)]="bank_name" placeholder="Bank name"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="account_no" [(ngModel)]="account_no" placeholder="Account number"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="IFSC_code" [(ngModel)]="IFSC_code" placeholder="IFSC_code"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <mat-label>Type of Account</mat-label>
+  <mat-select [(ngModel)]="type_of_account" name="type_of_account">
+  <mat-option *ngFor="let account of accounts" [value]="account.id" > {{account.name}}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+  </div>
+  </div>
+
+ <div class="col-md-12">
+    <mat-form-field >
+    <mat-label>WILL ACCEPT TO WORK FOR BELOW CATEGORY VEH RATE(confirmed by Owner)</mat-label>
+    <mat-select [(ngModel)]="will_accept_to_work_for_below_category"name="will_accept_to_work_for_below_category">
+    <mat-option *ngFor="let account of accountssss" [value]="account.id">{{account.name}}
+    </mat-option>
+    </mat-select>
+    </mat-form-field>
+    </div> 
+   
+    <div class="btn btn-info pull-left">
+      <input  color="primary" type="checkbox" [checked]="active" (change)="active= !active">active
+      </div>  
+    <button mat-raised-button type="submit"
+    (click)="onDriver(driver_name, email, phone, driver_address, driver_city, driver_state, driver_zip, alternate_contact_num,
+    emergency_contact_num, vehicle_number, badge, vehicle_registered_owner, category, model, gvw_in_kg, body_asper_RC,
+    unladen_weight, seating_capacity, road_tax_val, regn_date, fc_val, dl_expiry_date, permit_val, badge_val, manufacturer, class1, color,
+    namea, contact_numbera, nameb, contact_numberb, namec, contact_numberc, named, contact_numberd, work_preference,
+    body_type, will_accept_to_work_for_below_categor, bank_name, account_no, IFSC_code, type_of_account, owner_name, owner_phone, address1, city, zip, active)"
+    class="btn btn-success pull-right">Update Profile</button>
+  </div>
+  </div>
+  </div> 
+  </div>
+  </div>
+  </div>
+  

@@ -1,0 +1,164 @@
+<div class="main-content" style="width: 1000px;">
+  
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-md-8">
+  <div class="card">
+  <div class="card-header card-header-success">
+    <button mat-raised-button id="modal-cancel-button" style="margin-left:630px;" (click)="closeModal()">Back</button>
+  <h4 class="card-title">Two Wheeler Driver Registration</h4>
+  <p class="card-category">Complete your profile</p>
+  </div>
+  
+  <div class="card-body">
+  <div class="row">
+  <div class="col-md-4">
+    
+  <mat-form-field class="example-full-width" >
+    <input  matInput name="driver_name"[(ngModel)]="driver_name"  placeholder="Driver Name" value="driver_name" required >
+  </mat-form-field>
+  </div>
+   <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input  matInput name="email" [(ngModel)]="email"   placeholder="email" value="email" required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+    <input  matInput  name="phone" [(ngModel)]="phone" placeholder="phone num" required> 
+  </mat-form-field>
+
+  </div>
+  </div>
+  
+  
+  <div class="form-group">      
+  <div class="row">
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput name="alternate_contact_num" [(ngModel)]="alternate_contact_num"  maxlength="10" placeholder="Alternate Contact Number" required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-6">
+  <mat-form-field class="example-full-width">
+  <input matInput name="emergency_contact_num" [(ngModel)]="emergency_contact_num"  maxlength="10" placeholder="Emergency Contact Number"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-6">
+    <mat-form-field class="example-full-width">
+    <input  matInput name="vehicle_number" [(ngModel)]="vehicle_number"  placeholder="vehicle_number"required> 
+    </mat-form-field>
+    </div>
+  </div>
+  </div>
+  
+  
+   <label>Driver Address :</label><br>
+  <div class="row">
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input  matInput name="driver_address" [(ngModel)]="driver_address"  placeholder="Address" value="driver_address"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input matInput name="driver_city" [(ngModel)]="driver_city" value="driver_city" placeholder="driver_city" required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input  matInput name="driver_state" [(ngModel)]="driver_state"  placeholder="State"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <input  matInput name="driver_zip" [(ngModel)]="driver_zip"  placeholder="Zip"required> 
+  </mat-form-field>
+  </div>
+  </div> 
+  <br>
+  <div class="row">
+    
+      <div class="col-md-6">
+        <label>profile Piture:</label><br>  
+      <!-- <span style="color:red;"></span> -->
+      <img [src]="profile_photo" height="200" width="200" [@rotatedState]='state'> 
+     <input type="file" (change)="onprofilephotoFileChange($event)"> <br>
+     <button  (click)="rotate()">Rotate</button> 
+    </div>
+   
+     
+    <div class="col-md-4">
+      <label>DL-ScanCopy:</label><br>
+      <!-- <span style="color:red;" *ngIf="dl_scan_copy"></span> -->
+      <img [src]="dl_scan_copy" height="200" width="200" [@rotatedState]='state1'>
+      <input type="file"   name="dl_scan_copy" (change)="onDlscancopyFileChange($event)"><br>
+      <button   (click)="rotate1()">Rotate</button>
+      </div>
+      <br>
+      <div class="col-md-4">
+        <label>Insurance image:</label><br>
+        <!-- (change)="preview(insuranceimage.files)"  -->
+        <!-- <span style="color:red;" *ngIf="insurance_image"></span> -->
+        <img [src]="insurance_image" height="200" width="200" [@rotatedState]='state2'>
+        <input  type="file"  (change)="onInsuranceimageFileChange($event)"><br>
+        <button (click)="rotate2()">Rotate</button>
+      </div>
+
+    <div class="col-md-4">
+    <label>Driver Aadhar Card:</label><br> 
+      <!-- <span  style="color:red;" *ngIf="driver_aadhar_card"></span> -->
+      <img [src]="driver_aadhar_card" style="height: 200px; width: 200px;" [@rotatedState]='state3'>
+      <input   type="file"  (change)="onDriveraadharcardFileChange($event)"><br>
+      <button (click)="rotate3()">Rotate</button>
+    </div> 
+</div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <label>RC-Card Image:</label><br>
+      <img [src]="rc_card_image" style="height: 200px; width: 200px;" [@rotatedState]='state4'>
+      <input  type="file"  (change)="onRccardimageFileChange($event)"><br>
+      <button (click)="rotate4()">Rotate</button>
+      </div> 
+  </div>
+  
+  <div class="row">
+  <div class="col-md-4">
+  <label>rc_expiry_date:</label>
+  <input type="date" name="rc_expiry_date" [(ngModel)]="rc_expiry_date" useValueAsDate>
+  </div>
+
+  <div class="col-md-4">
+  <label>DL Expiry Date:</label>
+  <input type="date" name="dl_expiry_date" [(ngModel)]="dl_expiry_date" useValueAsDate>
+  </div>
+
+  <div class="col-md-4">
+  <label>insurance_expiry_date:</label>
+  <input type="date" name="insurence_expiry_date" [(ngModel)]="insurence_expiry_date"  useValueAsDate>
+  </div> 
+  </div>  
+  
+  <div class="btn btn-success pull-left">
+  <input  color="primary" type="checkbox" [checked]="active"   (change)="active=!active">active
+  </div>    <br><br><br>
+
+
+  <button mat-raised-button color="primary" class="btn btn-success pull-right" style="margin-left: 400px;">Save</button>
+
+
+
+
+
+
+  <div class="col-md-12">
+  <button mat-raised-button type="submit"  (click)="onSubmit(driver_name,email,phone,driver_address,driver_city,driver_state,driver_zip,alternate_contact_num,
+  emergency_contact_num,vehicle_number,dl_expiry_date,rc_expiry_date,insurence_expiry_date,active)" class="btn btn-success pull-right">Update Profile</button>
+  </div>
+  </div>
+  </div>
+  </div> 
+  </div>
+  </div>
+  </div>

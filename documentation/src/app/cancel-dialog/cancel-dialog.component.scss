@@ -1,0 +1,322 @@
+#modal-content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(1fr, 3);
+}
+
+#modal-title {
+    font-size: 22px;
+}
+
+#modal-footer {
+    justify-self: right;
+    align-self: center;
+}
+
+#modal-action-button {
+    margin-right: 30px;
+    background-color:darkcyan;
+}
+
+#modal-cancel-button {
+    background-color:darkcyan ;
+    height: 10% ;
+    width:10% ;
+    margin-left: 90%;
+    color:white;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .container-fluid{
+    padding-top: -10px;
+    padding-left: 50px;
+    width: 1300px;
+    background-color: lightness($color: #a72e2e);
+}
+.checkbox{
+    text-size-adjust:100px ;
+    margin-left: 100px;
+}
+.rotate {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+.rotate.down {
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg);
+}
+.sample-image
+{
+    width: 25%;
+    
+}
+
+.sample-image-large
+{
+    width: 100% !important;
+}
+
+*body {
+    margin: 0;
+  }
+
+  #zm a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zm a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #za a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #za a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zb a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zb a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zc a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zc a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zd a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zd a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #ze a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #ze a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zf a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zf a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zg a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zg a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zh a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zh a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zi a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zi a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zj a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zj a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zk a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zk a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zl
+  label a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zl a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #zn a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  #zn a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+
+  .main {
+    padding: 16px;
+    margin-top: 30px;
+  }
+  .main img {
+      width: 100%;
+      height: 100%;
+  }
+  .button {
+    width: 300px;
+    height: 60px;
+  }
+
+
+//   body, html {
+//     padding: 0;
+//     margin: 0;
+//     text-align: center;
+//     }
+    
+    /* Styles the thumbnail */
+    
+    a.lightbox img {
+    height: 150px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    margin: 94px 20px 20px 20px;
+    }
+    
+    /* Styles the lightbox, removes it from sight and adds the fade-in transition */
+    
+    .lightbox-target {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    overflow: hidden;
+    }
+    
+    /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+    
+    .lightbox-target img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    max-height: 0%;
+    max-width: 0%;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    box-sizing: border-box;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    }
+    
+    /* Styles the close link, adds the slide down transition */
+    
+    a.lightbox-close {
+    display: block;
+    width:50px;
+    height:50px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    }
+    
+    /* Provides part of the "X" to eliminate an image from the close link */
+    
+    a.lightbox-close:before {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 26px;
+    top:10px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+    }
+    
+    /* Provides part of the "X" to eliminate an image from the close link */
+    
+    a.lightbox-close:after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 26px;
+    top:10px;
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+    }
+    
+    /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+    
+    .lightbox-target:target {
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    }
+    
+    .lightbox-target:target img {
+    max-height: 100%;
+    max-width: 100%;
+    }
+    
+    .lightbox-target:target a.lightbox-close {
+    top: 0px;
+    }
+    

@@ -1,0 +1,67 @@
+.mylogin{
+  margin-top: 30px;
+margin-bottom: 150px;
+margin-left: 400px;
+
+}
+.row{
+  margin-top: 5px;
+ margin-left: 20px;
+}
+//// search css
+
+.container {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  color: #405065;
+}
+
+.search-hero {
+  max-width: 500px;
+  padding-bottom: 50px;
+  margin:auto;
+}
+
+.form-control {
+  box-shadow: 0 10px 40px 0 #B0C1D9;
+}
+.form-control::placeholder  {
+  font-family: FontAwesome;
+}
+////
+.login{
+
+  #login .container #login-row #login-column #login-box {
+    // margin-top: 10px;
+  
+    max-width: 600px;
+    height: 300px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }
+ 
+}
+
+.register{
+  #login .container #login-row #login-column #login-box {
+    margin-top: 50px;
+  
+    max-width: 600px;
+    height: 300px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }
+  
+}

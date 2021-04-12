@@ -1,0 +1,70 @@
+<div class="main-content">
+    <div class="container-fluid">
+
+        <button mat-raised-button color="primary" style="margin-top:60px; margin-left: 1200px;" [routerLink]="['/map']" (click)="refresh()">Refresh</button>
+        <!-- <img src="assets/img/blue.png" style="width: 50px; height: 50px;"><label>Two Wheeler Online Drivers</label>
+        <img src="assets/img/yellow.png" style="width: 50px; height: 50px;"><label>Two Wheeler Offline Drivers</label><br><br>
+        <img src="assets/img/green.png" style="width: 50px; height: 50px;"><label>Four Wheeler Online Drivers</label>
+        <img src="assets/img/red.png" style="width: 50px; height: 50px;"><label>Four Wheeler Offline Drivers</label><br><br> -->
+        <div class="form-group">
+        
+        <div class="row">
+            <!-- <div class="col-md-3">
+                <div class="box blue"> </div>
+                <label style="color: black;">Two Wheeler Online Drivers</label>
+               
+            </div>
+            <div class="col-md-3">
+                <div class="box yellow"> </div>
+                <label style="color: black;">Two Wheeler Offline Drivers</label>
+               
+            </div> -->
+            <div class="col-md-3">
+                <div class="box green"> </div>
+                <label style="color: black;">Four Wheeler Online Drivers</label>
+               
+            </div>
+            <div class="col-md-3">
+                <div class="box red"></div>
+                <label style="color: black;">Four Wheeler Offline Drivers</label>
+                </div>
+        </div>
+        </div>
+       
+       <agm-map [latitude]=" 12.972442" [longitude]="77.580643" [zoom]="12">
+       <!-- <agm-marker  [iconUrl] ="iconUrl1" *ngFor="let twowhl of twowhl" (markerClick)="clickedMarker(infowindow)" [latitude]="twowhl.lat" [longitude]="twowhl.lng">
+            <agm-info-window  #infowindow>
+              <strong *ngFor="let driver of twowhl.driver_info">{{driver.driver_name}}</strong><br>
+                <strong *ngFor="let driver of twowhl.driver_info">{{driver.phone}}</strong><br>
+                <strong *ngFor="let driver of twowhl.driver_info">{{driver.vehicle_number}}</strong>
+            </agm-info-window>
+           </agm-marker> -->
+
+           <!-- <agm-marker   [iconUrl] ="iconUrl2" *ngFor="let offtwowhl of offtwowhl" (markerClick)="clickedMarker(infowindow)" [latitude]="offtwowhl.lat" [longitude]="offtwowhl.lng">
+            <agm-info-window  #infowindow>
+               <strong *ngFor="let driver of offtwowhl.driver_info">{{driver.driver_name}}</strong><br>
+                <strong *ngFor="let driver of offtwowhl.driver_info">{{driver.phone}}</strong><br>
+                <strong *ngFor="let driver of offtwowhl.driver_info">{{driver.vehicle_number}}</strong>
+            </agm-info-window>
+           </agm-marker> -->
+
+           <agm-marker [iconUrl] ="iconUrl" *ngFor="let fourwhl of fourwhl"  (markerClick)="clickedMarker(infowindow)" [latitude]="fourwhl.lat" [longitude]="fourwhl.lng">
+            <agm-info-window #infowindow>
+            <strong *ngFor="let driver of fourwhl.driver_info">{{driver.driver_name}}</strong><br>
+                <strong *ngFor="let driver of fourwhl.driver_info">{{driver.phone}}</strong><br>
+                <strong *ngFor="let driver of fourwhl.driver_info">{{driver.vehicle_number}}</strong>
+            </agm-info-window>   
+            </agm-marker>
+
+           <agm-marker  [iconUrl] ="iconUrl3" *ngFor="let offfourwhl of offfourwhl"  (markerClick)="clickedMarker(infowindow)" [latitude]="offfourwhl.lat" 
+           [longitude]="offfourwhl.lng">
+            <agm-info-window  #infowindow>
+               <strong *ngFor="let driver of offfourwhl.driver_info">{{driver.driver_name}}</strong><br>
+                <strong *ngFor="let driver of offfourwhl.driver_info">{{driver.phone}}</strong><br>
+                <strong *ngFor="let driver of offfourwhl.driver_info">{{driver.vehicle_number}}</strong>
+            </agm-info-window>
+           </agm-marker>
+       </agm-map>
+      
+      </div>
+        </div>

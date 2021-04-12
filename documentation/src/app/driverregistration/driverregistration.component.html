@@ -1,0 +1,480 @@
+<div class="main-content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-8">
+<div class="card">
+<div class="card-header card-header-info">
+<h4 class="card-title">Four Wheeler Driver Registration </h4>
+<p class="card-category">Complete your profile</p>
+</div>
+<div class="card-body">
+                                                   
+
+
+
+<div class="row">
+  <div class="col-md-4">
+    <mat-form-field class="example-full-width">
+    <input matInput name="vendor_uuid" [(ngModel)]="vendor_uuid" placeholder="Vendor ID"required> 
+    </mat-form-field>
+    </div>
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="driver_name"  [(ngModel)]="driver_name" placeholder="Driver Name" required> 
+
+</mat-form-field>
+</div>
+ <div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="email" [(ngModel)]="email"  placeholder="Email" required> 
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="phone" [(ngModel)]="phone" placeholder="Phone" maxlength="10" required> 
+</mat-form-field>
+
+</div>
+<div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="alternate_contact_num" [(ngModel)]="alternate_contact_num"  maxlength="10" placeholder="Alternate Contact Number" required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="emergency_contact_num" [(ngModel)]="emergency_contact_num"  maxlength="10" placeholder="Emergency Contact Number"required> 
+  </mat-form-field>
+  </div>
+</div>
+
+
+ <label style="color: black;">Driver Address :</label><br>
+<div class="row">
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="driver_address" [(ngModel)]="driver_address" placeholder="Address"required> 
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="driver_city" [(ngModel)]="driver_city" placeholder="City"required> 
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="driver_state" [(ngModel)]="driver_state" placeholder="State"required> 
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="driver_state"[(ngModel)]="driver_zip" placeholder="Zip"required> 
+</mat-form-field>
+</div>
+<div class="col-md-4">
+  <mat-form-field class="example-full-width">
+  <input matInput name="vehicle_number" [(ngModel)]="vehicle_number" placeholder="Vehicle Number"required> 
+  </mat-form-field>
+  </div>
+  <div class="col-md-4">
+    <mat-form-field class="example-full-width">
+    <input matInput name="badge" [(ngModel)]="badge" placeholder="Badge"required> 
+    </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-form-field class="example-full-width">
+      <input matInput name="body_asper_RC" [(ngModel)]="body_asper_RC" placeholder="Body as per RC"required> 
+      </mat-form-field>
+      </div>
+      <div class="col-md-4">
+      <mat-form-field class="example-full-width">
+      <input matInput name="vehicle_registered_owner" [(ngModel)]="vehicle_registered_owner" placeholder="Vehicle Registered Owner"required> 
+      </mat-form-field>
+      </div>
+      <div class="col-md-4">
+      <mat-form-field class="example-full-width">
+      <input matInput name="model" [(ngModel)]="model" placeholder="Model"required> 
+      </mat-form-field>
+      </div>
+</div> 
+
+ <div class="row">
+<div class="col-md-6">
+<label style="color: black;" >PERMIT VALIDITY:
+<input type="date" name="permit_val" [(ngModel)]="permit_val" placeholder="Permit Validity"useValueAsDate></label>
+</div>
+<div class="col-md-6">
+<label style="color: black;">BADGE VALIDITY:
+<input type="date" name="badge_val" [(ngModel)]="badge_val" placeholder="Badge Validity"useValueAsDate></label>
+</div>
+</div>
+
+
+
+<label style="color: black;">Driver Reference one :</label><br>
+<div class="row">
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="namea" [(ngModel)]="namea" placeholder="Name"required> 
+</mat-form-field>
+</div>
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="contact_numbera" [(ngModel)]="contact_numbera" maxlength="10" placeholder="Contact Number"required> 
+</mat-form-field>
+</div>
+</div>
+<label style="color: black;"  style="color: black;">Driver Reference two:</label><br>
+<div class="row">
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="nameb" [(ngModel)]="nameb" placeholder="Name"required> 
+</mat-form-field>
+</div>
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="contact_numberb" [(ngModel)]="contact_numberb" maxlength="10" placeholder="Contact Number"required> 
+</mat-form-field>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-md-4">
+<label style="color: black;" >REGN Date:
+<input type="date" name="regn_date" [(ngModel)]="regn_date" useValueAsDate></label >
+</div>
+<div class="col-md-4">
+<label style="color: black;" >DL Expiry Date:
+<input type="date" name="dl_expiry_date" [(ngModel)]="dl_expiry_date" useValueAsDate></label >
+</div>
+<div class="col-md-4">
+<label style="color: black;" >F C VALIDITY Date:
+<input type="date" name="fc_val" [(ngModel)]="fc_val" useValueAsDate></label >
+</div>
+</div>  
+
+<div class="row">
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="manufacturer" [(ngModel)]="manufacturer" placeholder="manufacturer"required> 
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="class1" [(ngModel)]="class1" placeholder="class"required> 
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="color" [(ngModel)]="color" placeholder="Color"required> 
+</mat-form-field>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="gvw_in_kg" [(ngModel)]="gvw_in_kg" placeholder="GVW in kg(Gross Vehicle Weight)"required> 
+</mat-form-field>
+</div>
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="unladen_weight" [(ngModel)]="unladen_weight" placeholder="UNLADEN WEIGHT in kg"required> 
+</mat-form-field>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-6">
+<mat-form-field>
+<mat-label style="color: black;" >Work Preference</mat-label >
+<mat-select [(ngModel)] ="work_preference" multiple>
+<mat-option *ngFor="let packing of packingList" [value]="packing">{{packing}}</mat-option>
+</mat-select>
+</mat-form-field>
+</div> 
+ <div class="col-sm-6">
+<mat-form-field>
+<mat-label style="color: black;" >Body Type</mat-label >
+<mat-select [(ngModel)]="body_type"name="body_type">
+<mat-option *ngFor="let account of accountsss" [value]="account.id" > {{account.name}}
+</mat-option>
+</mat-select> 
+</mat-form-field>
+</div>
+</div> 
+
+
+ <div class="row">
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="category" [(ngModel)]="category" placeholder="Category"required> 
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="seating_capacity" [(ngModel)]="seating_capacity" placeholder="Seating Capacity"required> 
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="example-full-width">
+<input matInput name="road_tax_val" [(ngModel)]="road_tax_val" placeholder="ROAD TAX VALIDITY"required> 
+</mat-form-field>
+</div>
+
+<div class="row">
+<div class="col-md-4">
+  <label style="color: black;" >profilepic:
+  <input type="file"(change)="onFileChanged($event)"></label >
+  </div>
+
+  <div class="col-md-4">
+    <label style="color: black;" >DL Scan Copy:
+    <input type="file" (change)="onDlscancopyFileChanged($event)"/></label >
+    </div>
+  <div class="col-md-4">
+  <label style="color: black;" >Driver Pan Card:
+  <input type="file" (change)="onDriverpancardFileChanged($event)"></label >
+  </div>
+  <div class="col-md-4">
+  <label style="color: black;" >Driver Aadhar Card:
+  <input type="file" (change)="onDriveraadharcardFileChanged($event)"></label ><br>
+  </div>
+
+  
+    <div class="col-md-4">
+      <label style="color: black;" >Image of RC Card:
+      <input type="file" (change)="onRccardimageFileChanged($event)"></label >
+      </div>
+      <div class="col-md-4">
+        <label style="color: black;" >Permit Image:
+        <input type="file" (change)="onPermitimageFileChanged($event)"></label ><br>
+        </div>
+        <div class="col-md-4">
+          <label style="color: black;" >Insurance image:
+          <input type="file" (change)="onInsuranceimageFileChanged($event)"/></label ><br>
+          </div>
+        
+
+        
+
+          <div class="col-md-4">
+          <label style="color: black;" >Puc Image:
+          <input type="file" (change)="onPucimageFileChanged($event)"></label ><br>
+          </div>
+          
+          <div class="col-md-4">
+            <label style="color: black;" >Cancelled Cheque Image:
+            <input type="file" (change)="onCancelledchequeimageFileChanged($event)"></label ><br>
+            </div>
+          
+          </div>
+
+</div> 
+<!-- 
+<div class="btn btn-info col-md-12" style="float: left;">
+<input type="checkbox" [checked]="owner_cum_driver" (change)="owner_cum_driver=!owner_cum_driver">OWNER COME DRIVER(if it is owner come driver)
+</div>  -->
+<!-- <input type="checkbox" [(ngModel)]="owner_cum_driver"  data-md-icheck (change)="toggleVisibility($event)"/>
+owner_cum_driver1 <span *ngIf="marked">checked</span><span *ngIf="!marked">unchecked</span> -->
+
+
+<!-- <h2>ngIf</h2>
+<button (click)="show=!show">{{show ? 'hide' : 'show'}}</button> -->
+
+<div >
+  <div class="btn btn-info col-md-12" style="float: left;">
+       <input #big type="checkbox" [(ngModel)]="owner_cum_driver" name="size" (change)="checkValue($event,driver_name,phone,driver_address,driver_city,driver_state,driver_zip,namea
+       ,contact_numbera,nameb,contact_numberb)">OWNER COME DRIVER(Please check if you are owner come driver)
+   
+  </div >
+   <div >
+     
+    <!-- Big heading</h3>
+    <p *ngIf="small.checked">Small paragraph</p> -->  
+
+
+
+
+<!-- <div class="btn btn-info col-md-12" style="float: left;">
+<input type="checkbox" [(ngModel)]="owner_cum_driver1" (change)="checkValue($event)" />OWNER COME DRIVER(if it is owner come driver)
+</div> -->
+
+
+<!-- <div [style.visibility]="shown?'visible':'hidden'"> -->
+<div class="row">
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="owner_name" [(ngModel)]="owner_name" placeholder="owner name"required> 
+</mat-form-field>
+</div>
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="owner_phone" [(ngModel)]="owner_phone" maxlength="10" placeholder="owner phone"required> 
+</mat-form-field>
+</div>
+</div><br>
+
+
+<label style="color: black;" >owner_address:</label >                                                   
+<div class="row">  
+<div class="col-md-3">
+<mat-form-field class="example-full-width">
+<input matInput name="address1" [(ngModel)]="address1" placeholder="address"required> 
+</mat-form-field>
+</div>
+<div class="col-md-3">
+<mat-form-field class="example-full-width">
+<input matInput name="city" [(ngModel)]="city" placeholder="city"required> 
+</mat-form-field>
+</div>
+<div class="col-md-3">
+<mat-form-field class="example-full-width">
+<input matInput name="state" [(ngModel)]="state" placeholder="state"required> 
+</mat-form-field>
+</div>
+<div class="col-md-3">
+<mat-form-field class="example-full-width">
+<input matInput name="zip"[(ngModel)]="zip" placeholder="zip"required> 
+</mat-form-field>
+</div>
+</div>
+
+<label style="color: black;" >owner_reference_one :</label ><br>
+<div class="row">
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="namec" [(ngModel)]="namec" placeholder="Name"required> 
+</mat-form-field>
+</div>
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="contact_numberc" [(ngModel)]="contact_numberc" maxlength="10" placeholder="Contact Number"required> 
+</mat-form-field>
+</div>
+</div>
+
+<label style="color: black;" >owner_reference_two:</label ><br>
+<div class="row">
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="named" [(ngModel)]="named" placeholder="Name"required> 
+</mat-form-field>
+</div>
+<div class="col-md-6">
+<mat-form-field class="example-full-width">
+<input matInput name="contact_numberd" [(ngModel)]="contact_numberd" maxlength="10" placeholder="Contact Number"required> 
+</mat-form-field>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+  <label style="color: black;" >owner_aadhar_card:
+  <input type="file" (change)="onOwneraadharcardFileChanged($event)"></label >
+</div>
+</div>
+</div>
+
+</div>
+<!-- <div class="row">
+<div class="col-md-4">
+<label style="color: black;" >owner_profile_photo:
+<input type="file" (change)="onFileChanged11($event)"></label >
+</div>
+<div class="col-md-4">
+<label style="color: black;" >owner_pan_card:
+<input type="file" (change)="onFileChanged12($event)"></label ><br>
+</div> -->
+
+<!-- </div> -->
+
+
+ <div class="col-md-12">
+<mat-form-field >
+<mat-label style="color: black;" >WILL ACCEPT TO WORK FOR BELOW CATEGORY VEH RATE(confirmed by Owner)</mat-label >
+<mat-select [(ngModel)]="will_accept_to_work_for_below_categor"name="will_accept_to_work_for_below_categor">
+<mat-option *ngFor="let account of accountss" [value]="account.id">{{account.name}}
+</mat-option>
+</mat-select>
+</mat-form-field>
+</div> 
+
+<label style="color: black;" > Owner Bank Details:</label ><br>                                                      
+<div class="row">
+<div class="col-md-3">
+<mat-form-field class="example-full-width">
+<input matInput name="bank_name" [(ngModel)]="bank_name" placeholder="Bank name"required> 
+</mat-form-field>
+</div>
+<div class="col-md-3">
+<mat-form-field class="example-full-width">
+<input matInput name="account_no" [(ngModel)]="account_no" placeholder="Account number"required> 
+</mat-form-field>
+</div>
+<div class="col-md-3">
+<mat-form-field class="example-full-width">
+<input matInput name="IFSC_code" [(ngModel)]="IFSC_code" placeholder="IFSC_code"required> 
+</mat-form-field>
+</div>
+<div class="col-md-3">
+<mat-form-field class="example-full-width">
+<mat-label style="color: black;" >Type of Account</mat-label >
+<mat-select [(ngModel)]="type_of_account"name="type_of_account">
+<mat-option *ngFor="let account of accounts" [value]="account.id" > {{account.name}}
+</mat-option>
+</mat-select>
+</mat-form-field>
+</div>
+</div>
+
+
+
+
+
+<div class="row">
+<div class="col-md-3">
+
+<label style="color: black;" >vehicle_photo_front:
+<input type="file" (change)="onVehiclephotofrontFileChanged($event)"></label >
+</div>
+<div class="col-md-3">
+<label style="color: black;" >vehicle_photo_back:
+<input type="file" (change)="onVehiclephotobackFileChanged($event)"></label >
+</div>
+<div class="col-md-3">
+<label style="color: black;" >vehicle_photo_right:
+<input type="file" (change)="onVehiclephotorightFileChanged($event)"></label >
+</div>
+<div class="col-md-3">
+<label style="color: black;" >vehicle_photo_left:
+<input type="file" (change)="onVehiclephotoleftFileChanged($event)"></label >
+</div>
+</div>
+
+
+<div class="btn btn-info pull-left">
+<input  color="primary" type="checkbox" [checked]="active" (change)="active= !active">active
+</div>        
+<!-- owner_cum_driver, will_accept_to_work_for_below_categor,body_type-->
+<div class="col-md-12">
+<button mat-raised-button type="submit"(click)="onDriver(driver_name,email,phone,driver_address,driver_city,driver_state,driver_zip,alternate_contact_num,
+emergency_contact_num,vehicle_number,badge,vehicle_registered_owner,category,model,gvw_in_kg,body_asper_RC,
+unladen_weight,seating_capacity,road_tax_val,regn_date,fc_val,dl_expiry_date,permit_val,badge_val,manufacturer,class1,color,
+namea,contact_numbera,nameb,contact_numberb,namec,contact_numberc,named,contact_numberd,work_preference,body_type,will_accept_to_work_for_below_categor,
+bank_name,account_no,IFSC_code,type_of_account,owner_name,owner_phone,address1,city,state,zip,active)"class="btn btn-info pull-right">Update Profile</button>
+</div>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</div>

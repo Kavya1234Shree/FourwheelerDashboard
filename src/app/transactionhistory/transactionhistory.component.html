@@ -1,0 +1,35 @@
+<h1 style="text-align: center;font-family: Georgia, serif;"> Transaction History</h1> 
+  <button mat-raised-button color="primary" style=" margin-top:-20px; margin-left: 1030px;" [routerLink]="['/transactionhistory']" (click)="refresh()">Refresh</button><br>
+  <input  type="text" id="myInput" placeholder="Search here.." [(ngModel)]="term" title="Type in a name">
+  <div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0" style="background-color: white;">
+  
+  <table id="customers">
+  <thead>
+   <tr>
+    <th>S.No</th>
+     <th>Transaction ID</th>
+     <th>Status</th>
+     <th>Vehicle Type</th>
+     <th>delivered time</th>
+    <th>Action</th>
+  </thead>
+  <tr *ngFor="let hist of detail| paginate: { id:'listing_pagination',itemsPerPage: 15,currentPage: page,totalItems: totalRec }|filter:term; let i= index">
+    <td >{{(page-1)*15+i+1}}</td>
+    <td>{{hist.old_trans_uuid}}</td> 
+       <td>{{hist.status}}</td>
+       <td>{{hist.type_of_vehicle}}</td>
+       <td>{{hist.delivered_time | date:'dd-MM-yyyy '}}</td> 
+       <button mat-raised-button style="background-color: rgba(7, 161, 123, 0.87);" (click)="openModal(hist.old_trans_uuid,hist.status, hist.type_of_vehicle, hist.delivered_time, hist.order_time, hist.customer_uuid, hist.pick_up_address, hist.type_of_packages, 
+       hist.amount, hist.accepted_time, hist.driver_uuid, hist.pick_up_time, hist.selectchildvehical, hist.payment_method, hist.vehicle_amount, hist.name, hist.phone, hist.address, hist.landmark)">View</button>
+</tr>
+
+</table>
+<div>
+  <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+</div>
+</div>

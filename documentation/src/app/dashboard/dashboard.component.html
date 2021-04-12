@@ -1,0 +1,167 @@
+
+    <div class="navbar-nav">
+        <!-- <a class="nav-item nav-link" routerLink="/">Home</a> -->
+        <a class="btn btn-primary" style="background-color: #1885b7 ;width: 8%;margin-left:1220px;color:white" (click)="logout()">Logout</a>
+    </div>
+
+
+<!-- main app container -->
+
+<!-- <button mat-button [routerLink]="['/dashboard']" (click)="refresh()">Refresh</button> -->
+
+<button mat-raised-button color="primary" style="margin-top:60px; margin-left: 1223px;" [routerLink]="['/dashboard']" (click)="refresh()">Refresh</button>
+
+
+<div class="main-content" style="margin-top: 0px;">
+ <div class="container-fluid">
+     <div class="row">
+         <div class="col-lg-4 col-md-6 col-sm-6">
+            <a [routerLink]="['/offline-driv']" >
+             <div class="card card-stats">
+                 <div class="card-header card-header-danger card-header-icon">
+                     <div class="card-icon">
+                         <i class="material-icons">toggle_off</i>
+                     </div>
+                     <p class="card-category">Offline Drivers</p>
+                     <h3 class="card-title"> 
+                       {{driver_offline}}
+                     </h3> 
+
+                 </div>
+                 <!-- <div class="card-footer">
+                     <div class="stats">
+                         <i class="material-icons text-danger">warning</i>
+                          <a href="javascript:void(0)">Get More Space...</a>
+                      </div>
+                 </div> --> 
+             </div>
+            </a>
+         </div>
+         <div class="col-lg-4 col-md-6 col-sm-6">
+           <!-- <a href="online-driv.component.html"> -->
+            <a [routerLink]="['/online-driv']" >
+
+             <div class="card card-stats">
+                 <div class="card-header card-header-success card-header-icon">
+                     <div class="card-icon">
+                         
+                         <i class="material-icons">toggle_on</i>
+                      
+                     </div>
+                     <p class="card-category">Online Drivers</p>
+                     <h3 class="card-title"> {{driver_online}}</h3>
+                 </div>
+                 <!-- <div class="card-footer">
+                     <div class="stats">
+                         <i class="material-icons">date_range</i> Last 24 Hours
+                     </div>
+                 </div> -->
+             </div>
+</a>
+         </div>
+         <div class="col-lg-4 col-md-6 col-sm-6">
+           <a [routerLink]="['/driv-regw2']" >
+             <div class="card card-stats">
+                 <div class="card-header card-header-danger card-header-icon">
+                     <div class="card-icon">
+                         <i class="material-icons">motorcycle</i>
+                     </div>
+                     <p class="card-category">Two wheeler Registered Drivers</p>
+                     
+                     <h3 class="card-title"> {{driver_two}}</h3>
+                 </div>
+                 <!-- <div class="card-footer">
+                     <div class="stats">
+                         <i class="material-icons">local_offer</i> Tracked from Github
+                     </div>
+                 </div> -->
+             </div>
+             </a>
+         </div>
+         <div class="col-lg-4 col-md-6 col-sm-6">
+           <a [routerLink]="['/driv-regw4']" >
+             <div class="card card-stats">
+                 <div class="card-header card-header-info card-header-icon">
+                     <div class="card-icon">
+                       <i class="material-icons">local_shipping</i>
+                     </div>
+                     <p class="card-category">Four wheeler Registered Drivers</p>
+                     <h3 class="card-title">{{driver_four}}</h3>
+                 </div>
+                 <!-- <div class="card-footer">
+                     <div class="stats">
+                         <i class="material-icons">update</i> Just Updated
+                     </div>
+                 </div> -->
+             </div>
+             </a>
+         </div>
+         <div class="col-lg-4 col-md-6 col-sm-6">
+           <a [routerLink]="['/picked-info']" >
+           <div class="card card-stats">
+               <div class="card-header card-header-danger card-header-icon">
+                   <div class="card-icon">
+                       <i class="material-icons">motorcycle</i>
+                   </div>
+                   <p class="card-category">Picked Orders</p>
+                   <h3 class="card-title"> {{picked_up}}</h3>
+               </div>
+               <!-- <div class="card-footer">
+                   <div class="stats">
+                       <i class="material-icons">local_offer</i> Tracked from Github
+                   </div>
+               </div> -->
+           </div>
+           </a>
+       </div>
+       <div class="col-lg-4 col-md-6 col-sm-6">
+           <a [routerLink]="['/accepted-orders']" >
+           <div class="card card-stats">
+               <div class="card-header card-header-danger card-header-icon">
+                   <div class="card-icon">
+                       <i class="material-icons">motorcycle</i>
+                   </div>
+                   <p class="card-category">Accepted Orders</p>
+                   <h3 class="card-title"> {{picking_up}}</h3>
+               </div>
+               <!-- <div class="card-footer">
+                   <div class="stats">
+                       <i class="material-icons">local_offer</i> Tracked from Github
+                   </div>
+               </div> -->
+           </div>
+       </a>
+       </div>
+       <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+           <a [routerLink]="['/online-driv']" >
+           <div class="card card-stats">
+               <div class="card-header card-header-danger card-header-icon">
+                   <div class="card-icon">
+                       <i class="material-icons">motorcycle</i>
+                   </div>
+                   <p class="card-category">Online Driver's Information</p>
+               </div>
+               <div class="card-footer">
+                   <div class="stats">
+                       <i class="material-icons">local_offer</i> Tracked from Github
+                   </div>
+               </div>
+           </div>
+       </a>
+       </div> -->
+       <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+           <div class="card card-stats">
+               <div class="card-header card-header-danger card-header-icon">
+                   <div class="card-icon">
+                       <i class="material-icons">motorcycle</i>
+                   </div>
+                   <p class="card-category">Accepted Orders</p>
+                   <h3 class="card-title"> {{picking_up}}</h3>
+               </div>
+               <div class="card-footer">
+                   <div class="stats">
+                       <i class="material-icons">local_offer</i> Tracked from Github
+                   </div>
+               </div>
+           </div>
+       </div> -->

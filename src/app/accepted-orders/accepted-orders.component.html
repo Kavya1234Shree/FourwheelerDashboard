@@ -1,0 +1,40 @@
+<div class="container"
+fxLayout
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="10px"
+fxLayoutGap.xs="0" style="background-color: white;">
+<div class="trade-75">
+  <button type="button" class="btn trade-back"  [routerLink]="['/dashboard']">Back</button> 
+</div>
+<div class="container">
+       
+<table id="customers">
+  <col width="130">
+<thead>
+ <tr>
+  <th>SL.no</th>
+  <th>Driver ID</th>
+   <th>Driver Name</th>
+   <th>Driver Phone</th>
+   <th>Customer Id</th>
+   <th>Customer Name</th>
+   <th>Customer Phone</th>
+   <th>Package</th>
+   <th>Delivery Address</th>
+</thead>
+    <tr *ngFor="let driver of picking_info ,let i = index;">
+        <td >{{i+1}}</td>
+        <td *ngFor="let diver of driver.driver_info">{{diver.driver_uuid}}</td>
+        <td *ngFor="let diver of driver.driver_info">{{diver.driver_name}}</td>
+        <td *ngFor="let diver of driver.driver_info">{{diver.phone}}</td> 
+        <td *ngFor="let dive of driver.cust_info">{{dive.customer_uuid}}</td>
+        <td *ngFor="let dive of driver.cust_info">{{dive.name}}</td>
+        <td *ngFor="let dive of driver.cust_info">{{dive.phone}}</td> 
+        <td>{{driver.type_of_packages}}</td>
+        <td>{{driver.delivery_address.address}}</td>
+       
+        </tr>
+  </table>
+  </div>
+  </div>

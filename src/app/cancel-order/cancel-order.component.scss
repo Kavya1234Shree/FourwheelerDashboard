@@ -1,0 +1,35 @@
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(6, 109, 128);
+    color: white;
+    text-align: center;
+  }
+  #myInput {
+    background-image: url('/src/app/images/serch.jpg');
+     background-position:100px 100px;
+     background-repeat: no-repeat;
+     width: 50%;
+     margin-left: 25%;
+     font-size: 16px;
+     padding: 12px 20px 12px 40px;
+     border: 1px solid #ddd;
+     margin-bottom: 12px;
+   }

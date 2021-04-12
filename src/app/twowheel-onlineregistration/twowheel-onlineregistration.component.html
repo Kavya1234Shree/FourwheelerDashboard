@@ -1,0 +1,25 @@
+
+<div class="container">
+       
+  <table id="customers">
+    <col width="130">
+  <thead>
+   <tr>
+     <th>Driver Name</th>
+     <th>Phone</th>
+     <th>Vehicle number</th>
+  </thead>
+      <tr *ngFor="let driver of detail">
+        <!-- <td *ngFor="let diver of driver.driver_info">{{diver.driver_uuid}}</td>
+        <td *ngFor="let diver of driver.driver_info">{{diver.driver_name}}</td>
+        <td *ngFor="let diver of driver.driver_info">{{diver.phone}}</td>  -->
+       <td>{{driver.driver_name}}</td> 
+       <td>{{driver.phone }}</td>
+       <td>{{driver.vehicle_number}}</td>
+       <td>
+         <button mat-raised-button (click)="openModal(driver.phone, driver.vehicle_number,driver.driver_name, driver.driver_address, driver.driver_city, driver.driver_state, driver.driver_zip, driver.email, driver.profile_photo)">Edit</button>
+       </td>
+       </tr>
+
+    </table>
+    </div>

@@ -1,0 +1,40 @@
+<h1 style="text-align: center;font-family: Georgia, serif;"> Interstate Orders</h1> 
+  <button mat-raised-button color="primary" style="margin-left: 1030px;" [routerLink]="['/interstate']" (click)="refresh()">Refresh</button><br>
+  <input  type="text" id="myInput" placeholder="Search here.." [(ngModel)]="term">
+  <div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0" style="background-color: white;">
+  
+  <table id="customers">
+  <thead>
+   <tr>
+    <th>S.No</th>
+     <th>ID</th>
+     <th>Distance</th>
+     <th>Status</th>
+     <th>Vehicle name</th>
+     <th>Type of package</th>
+     <th>Customer name</th>
+     <th>Cutomer phone</th>
+    <th>Action</th>
+  </thead>
+  <tr *ngFor="let hist of detail| paginate: { id:'listing_pagination',itemsPerPage: 15,currentPage: page,totalItems: totalRec }|filter:term; let i=index">
+    <td>{{(page-1)*15+i+1}}</td>
+    <td>{{hist.FourIntr_uuid}}</td> 
+       <td>{{hist.distance}}</td>
+       <td>{{hist.status}}</td>
+       <td>{{hist.selectchildvehical}}</td>
+     <td>{{hist.type_of_packages}}</td> 
+     <td *ngFor="let diver of hist.cust_info">{{diver.name}}</td>
+     <td *ngFor="let diver of hist.cust_info">{{diver.phone}}</td>
+     <button mat-raised-button style="background-color: rgba(7, 161, 123, 0.87);" (click)="openModal(hist.FourIntr_uuid)">View</button>
+     </tr>
+     </table>
+     <div>
+      <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+    </div>
+     </div>
+  

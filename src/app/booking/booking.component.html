@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    
+
+ 
+      
+
+<div class="mylogin">
+            <button color="warn" [style.visibility]="regicus?'visible':'hidden'" (click)="toggle()" id="bt" class="btn btn-info btn-md"  >
+                {{buttonName}}
+            </button>
+            <button color="warn"  [style.visibility]="nonregicus?'visible':'hidden'" (click)="toggle1()" id="bt" class="btn btn-info btn-md"  >
+                {{buttonName1}}
+            </button>
+        </div>
+            
+            <ng-container *ngIf="register_customer" class="register">
+                <div style="margin: 0 auto;text-align: left;">
+                    <div class="container text-center">
+                        <h1>{{title}}</h1>
+                      </div>
+                    <div class="row">
+                        <div class="search-hero">
+                          <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+                        </div>
+                        <table class="table table-striped">
+                          <thead>
+                          <tr>
+                            <th>Cust_uuid</th>
+                            <th>Customer Name</th>
+                            <th>Phone Number</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr *ngFor="let hero of customer | filter:searchText">
+                            <td>{{hero.customer_uuid}}</td>
+                            <td>{{hero.name}}</td>
+                            <td (click)="twowheeler(hero.customer_uuid,hero.name,hero.phone)">{{hero.phone}}</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+               
+            </div>
+              </ng-container>
+         
+
+    
+            <ng-container *ngIf="nonregister_customer">
+                <div style="margin: 0 auto;text-align: left;">
+                    <div class="container">
+                        <div id="login-row" class="row justify-content-center align-items-center">
+                            <div id="login-column" class="col-md-6">
+                                <div id="login-box" class="col-md-12">
+                                    <form id="login-form" class="form" action="" method="post">
+                                        <h3 class="text-center text-info">Register</h3>
+                                        <div class="form-group">
+                                            <label for="name" class="text-info">name</label><br>
+                
+                                            <input type="text" [(ngModel)]= "name" name="name" placeholder="name" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="text-info">email</label><br>
+                
+                                            <input type="text" [(ngModel)]= "email" name="email" placeholder="email" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="email" class="text-info">phone</label><br>
+                
+                                            <input type="text" [(ngModel)]= "phone" name="phone" placeholder="phone" class="form-control">
+                                        </div>
+                                    
+                                    
+                                        <div class="form-group">
+                                           
+                                            <input type="submit" name="submit" class="btn btn-info btn-md"(click)="onRegister(name,email,phone)" value="submit"><br>
+                                            <!-- <button type ="submit" id="submit" (click)="onLogin(Phone)">Submit</button> -->
+                                        </div>
+                                        <div id="register-link" class="text-right">
+                                            <!-- <a href="#" class="text-info">Register here</a><br> -->
+                                           <!-- <br><a [routerLink] ="['/booking']">Don't have an account? Register</a> -->
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                    </div>
+              
+            </ng-container>
+            
+
+
+ 
+</body>
+</html>
